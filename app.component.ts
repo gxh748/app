@@ -1,26 +1,20 @@
-import { Component ,OnChanges,SimpleChanges,AfterViewInit,AfterViewChecked} from '@angular/core';
+import { Component ,OnInit,OnChanges,SimpleChanges,AfterViewInit,AfterViewChecked} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnChanges ,AfterViewInit,AfterViewChecked{
-  title = 'Tour of Heroes';
+export class AppComponent implements OnInit,OnChanges {
+  title = false;
   name:any="";
   user={age:18};
-  ngOnChanges(change:SimpleChanges){
-  	console.log("##########################");
-  	console.log("父组件 onchange",change);
-  	console.log("##########################");
-  }
+  replaceClass="true";
+  isred=true;
+  big=true;
 
-  ngAfterViewInit(){
-  	console.log("father AfterViewInit");
+  ngOnInit(){}
+  ngOnChanges(){
+  	//console.log(clickMsg);
   }
-
-  ngAfterViewChecked(){
-  	console.log("father AfterViewChecked");
-  }
-
 }

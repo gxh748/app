@@ -1,6 +1,5 @@
 <h1>{{title}}</h1>
-<!-- <app-heroes></app-heroes> -->
+<app-heroes></app-heroes>
 
-<div>name:<input type="text" [(ngModel)]="name" /></div>
-<div>user.age:<input type="text" [(ngModel)]="user.age" /></div>
-<app-life [item]="name" [user]="user"></app-life>
+
+<div (myClick)="clickMsg=$event">click</div>

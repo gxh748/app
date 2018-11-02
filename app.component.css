@@ -1,0 +1,7 @@
+.defaultClass{
+	height: 200px;
+	line-height: 100%;
+	width: 500px;
+	text-align: center;
+	border: 1px solid #f00;
+}
