@@ -16,5 +16,9 @@ export class HeroesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(){}
+  trackByFn(index,item){
+    console.log(index,item);
+    return item.name
+  }
 
 }

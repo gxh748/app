@@ -2,4 +2,19 @@
 <app-heroes></app-heroes>
 
 
-<div (myClick)="clickMsg=$event">click</div>
+<!-- <div (myClick)="clickMsg=$event">click</div> -->
+
+<!-- <app-sizer [(size)]="fontSizePx"></app-sizer>
+<div [style.font-size.px]="fontSizePx">fontSizePx</div>
+
+<div>安全导航操作符,name{{hero?.name}}</div> -->
+<!-- <p appHighlight hightlightColor="red">Highlighted in red</p> -->
+<div *ngIf="isShow" class="ngif" (click)="clickMsg()">is show</div>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<p  [appHightlight]="color">Highlighted in orange</p>
+
+<p *appUnless="condition">自定义结构型指令</p> 

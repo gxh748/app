@@ -12,9 +12,16 @@ export class AppComponent implements OnInit,OnChanges {
   replaceClass="true";
   isred=true;
   big=true;
+  fontSizePx=9;
+
+  color:string;
+
+  isShow=true;
 
   ngOnInit(){}
   ngOnChanges(){
   	//console.log(clickMsg);
   }
+
+  clickMsg(){}
 }

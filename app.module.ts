@@ -5,12 +5,18 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { LifeComponent } from './life/life.component';
+import { SizerComponent } from './bind/bind.component';
+import { HighlightDirective } from './hight-light.directive';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    LifeComponent
+    LifeComponent,
+    SizerComponent,
+    HighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
