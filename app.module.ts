@@ -1,26 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
-
+import { RouterModule,Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { LifeComponent } from './life/life.component';
-import { SizerComponent } from './bind/bind.component';
-import { HighlightDirective } from './hight-light.directive';
-import { UnlessDirective } from './unless.directive';
+import { FatherRouteComponent } from './father-route/father-route.component';
+import { ChildRouteDataComponent } from './child-route-data/child-route-data.component';
+import { ChildRouteIdComponent } from './child-route-id/child-route-id.component';
+import { ChildRouteWildComponent } from './child-route-wild/child-route-wild.component';
+
+const appRoutes:Routes=[
+  { path: 'father-route', component: FatherRouteComponent },
+  { path: 'hero/:id',      component: ChildRouteIdComponent },
+  {
+    path: 'heroes',
+    component: ChildRouteDataComponent,
+    data: { title: 'Heroes List' }
+  },
+  { path: '',
+    redirectTo: '/father-route',
+    pathMatch: 'full'
+  },
+  { path: '**', component: ChildRouteWildComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    LifeComponent,
-    SizerComponent,
-    HighlightDirective,
-    UnlessDirective
+    FatherRouteComponent,
+    ChildRouteDataComponent,
+    ChildRouteIdComponent,
+    ChildRouteWildComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]

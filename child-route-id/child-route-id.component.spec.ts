@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LifeComponent } from './life.component';
+import { ChildRouteIdComponent } from './child-route-id.component';
 
-describe('LifeComponent', () => {
-  let component: LifeComponent;
-  let fixture: ComponentFixture<LifeComponent>;
+describe('ChildRouteIdComponent', () => {
+  let component: ChildRouteIdComponent;
+  let fixture: ComponentFixture<ChildRouteIdComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LifeComponent ]
+      declarations: [ ChildRouteIdComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LifeComponent);
+    fixture = TestBed.createComponent(ChildRouteIdComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

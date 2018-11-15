@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BindComponent } from './bind.component';
+import { ChildRouteWildComponent } from './child-route-wild.component';
 
-describe('BindComponent', () => {
-  let component: BindComponent;
-  let fixture: ComponentFixture<BindComponent>;
+describe('ChildRouteWildComponent', () => {
+  let component: ChildRouteWildComponent;
+  let fixture: ComponentFixture<ChildRouteWildComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BindComponent ]
+      declarations: [ ChildRouteWildComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BindComponent);
+    fixture = TestBed.createComponent(ChildRouteWildComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

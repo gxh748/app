@@ -1,20 +1,9 @@
-<h1>{{title}}</h1>
-<app-heroes></app-heroes>
-
-
-<!-- <div (myClick)="clickMsg=$event">click</div> -->
-
-<!-- <app-sizer [(size)]="fontSizePx"></app-sizer>
-<div [style.font-size.px]="fontSizePx">fontSizePx</div>
-
-<div>安全导航操作符,name{{hero?.name}}</div> -->
-<!-- <p appHighlight hightlightColor="red">Highlighted in red</p> -->
-<div *ngIf="isShow" class="ngif" (click)="clickMsg()">is show</div>
-<div>
-  <input type="radio" name="colors" (click)="color='lightgreen'">Green
-  <input type="radio" name="colors" (click)="color='yellow'">Yellow
-  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    route app
+  </h1>
 </div>
-<p  [appHightlight]="color">Highlighted in orange</p>
+<router-outlet></router-outlet>
 
-<p *appUnless="condition">自定义结构型指令</p> 
+
