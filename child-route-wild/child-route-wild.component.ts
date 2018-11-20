@@ -13,7 +13,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChildRouteWildComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    console.log("app-child-route-wild");
+  }
 
   ngOnInit() {
   }

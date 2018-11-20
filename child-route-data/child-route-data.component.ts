@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute,Router,NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-child-route-data',
@@ -14,9 +15,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChildRouteDataComponent implements OnInit {
 
-  constructor() { }
+  constructor(activeRoute:ActivatedRoute,private router:Router) {
+    //console.log(activeRoute)
+   }
 
   ngOnInit() {
+    console.log(this.router.events);
+    this.router.events.subscribe(
+      event=>{
+        if(event instanceof NavigationStart){
+          console.log(event)
+        }
+      }
+      )
   }
 
 }

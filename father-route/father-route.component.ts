@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-father-route',
@@ -12,7 +14,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FatherRouteComponent implements OnInit {
 
-  constructor() { }
+  constructor(route:ActivatedRoute) { 
+    console.log(route)
+  }
 
   ngOnInit() {
   }

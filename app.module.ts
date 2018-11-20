@@ -1,40 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule,Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { FatherRouteComponent } from './father-route/father-route.component';
-import { ChildRouteDataComponent } from './child-route-data/child-route-data.component';
-import { ChildRouteIdComponent } from './child-route-id/child-route-id.component';
-import { ChildRouteWildComponent } from './child-route-wild/child-route-wild.component';
+import { NgModule }       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
+import { FormsModule }    from '@angular/forms';
 
-const appRoutes:Routes=[
-  { path: 'father-route', component: FatherRouteComponent },
-  { path: 'hero/:id',      component: ChildRouteIdComponent },
-  {
-    path: 'heroes',
-    component: ChildRouteDataComponent,
-    data: { title: 'Heroes List' }
-  },
-  { path: '',
-    redirectTo: '/father-route',
-    pathMatch: 'full'
-  },
-  { path: '**', component: ChildRouteWildComponent }
-];
+import { AppComponent }     from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { CrisisListComponent }   from './crisis-list/crisis-list.component';
+import { HeroListComponent }     from './hero-list/hero-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FatherRouteComponent,
-    ChildRouteDataComponent,
-    ChildRouteIdComponent,
-    ChildRouteWildComponent
-  ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HeroListComponent,
+    CrisisListComponent,
+    PageNotFoundComponent
+  ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
